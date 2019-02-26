@@ -7,25 +7,38 @@ class PigLatinizer
    end
    
    def piglatinize(string)
-     alpha = ('a'..'z').to_a
-     vowels = %w[a e i o u]
-     consonants = alpha - vowels
-     
-     if string.count > 1
-      string = string.split(" ")
-     end
-
-    string.each do |word|
-      if vowels.include?(string[0])
-        string + 'way'
-      elsif consonants.include?(string[0]) && consonants.include?(string[1])
-        string[2..-1] + string[0..1] + 'ay'
-      elsif consonants.include?(string[0])
-        string[1..-1] + string[0] + 'ay'
+      phrase = []
+      if string.include? " "
+        phrase = string.split(" ").map do |word|
+        rearrange(word)
+        end
+          phrase = phrase.join(" ")
       else
-        string + 'way'
+      phrase = rearrange(string)
       end
-    end
+        phrase
    end
+
+   def rearrange(word) 
+    vowels = ["a", "e", "i", "o", "u", "y"]
+    new_word = word
+    
+    word.each_char do |char|
+      if char == "u" && new_word[-1] == "q"
+        new_word << "u"
+        new_word.slice!(0)
+      next
+      elsif vowels.include? char
+        new_word << "ay"
+        break
+      else
+        new_word << char
+        new_word.slice!(0)
+      next
+      end
+  end
+  new_word
+end
+
    
 end
