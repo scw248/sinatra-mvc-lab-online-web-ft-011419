@@ -10,6 +10,7 @@ class PigLatinizer
     if user_phrase.include?(" ")
       user_phrase.each do |word|
         translator(word)
+      end
     else
       translator(word)
     end
