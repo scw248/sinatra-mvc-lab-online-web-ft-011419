@@ -2,7 +2,7 @@ class PigLatinizer
   
   attr_reader :user_phrase
   
-   def initialize(user_phrase: nil)
+   def initialize(user_phrase: nil.to_s)
     @user_phrase = user_phrase
    end
    
