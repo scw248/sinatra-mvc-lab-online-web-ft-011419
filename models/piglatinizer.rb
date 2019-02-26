@@ -7,7 +7,13 @@ class PigLatinizer
    end
    
   def piglatinize(user_phrase)
-    if user_phrase.count
+    if user_phrase.include?(" ")
+      user_phrase.each do |word|
+        translator(word)
+    else
+      translator(word)
+    end
+  end
     
   def translator(word)
     non_pig_latin_words = ["i", "I", "me", "Me", "to", "To", "too", "Too", "a", "A", "an", "An", "in", "In", "and", "And", "on", "On"]
