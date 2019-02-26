@@ -6,8 +6,10 @@ class PigLatinizer
     @user_phrase = user_phrase
    end
    
+  def piglatinize(user_phrase)
+    if user_phrase.count
     
-  def piglatinize(word)
+  def translator(word)
     non_pig_latin_words = ["i", "I", "me", "Me", "to", "To", "too", "Too", "a", "A", "an", "An", "in", "In", "and", "And", "on", "On"]
     vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
