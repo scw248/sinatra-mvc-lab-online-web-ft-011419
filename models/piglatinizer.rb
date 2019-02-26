@@ -12,7 +12,7 @@ class PigLatinizer
         translator(word)
       end
     else
-      translator(word)
+      translator(user_phrase)
     end
   end
     
