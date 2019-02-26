@@ -13,7 +13,7 @@ class PigLatinizer
      
      if string.count > 1
       string = string.split(" ")
-    end
+     end
 
     string.each do |word|
       if vowels.include?(string[0])
