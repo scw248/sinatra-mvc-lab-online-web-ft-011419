@@ -12,7 +12,7 @@ class PigLatinizer
     vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
     if non_pig_latin_words.include?(word)
-      word
+      word + "way"
     elsif vowels.include? word[0]
       word << "ay"
     else
