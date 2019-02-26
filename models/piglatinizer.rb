@@ -14,7 +14,7 @@ class PigLatinizer
         end
           phrase = phrase.join(" ")
       else
-      phrase = rearrange(string)
+        phrase = rearrange(string)
       end
         phrase
    end
