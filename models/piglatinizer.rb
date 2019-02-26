@@ -7,11 +7,12 @@ class PigLatinizer
    end
    
    def piglatinize(string)
-     string = string.split(" ")
+     string = string.split(" ").
      alpha = ('a'..'z').to_a
      vowels = %w[a e i o u]
      consonants = alpha - vowels
 
+    string.each do |word|
       if vowels.include?(string[0])
         string + 'way'
       elsif consonants.include?(string[0]) && consonants.include?(string[1])
@@ -21,5 +22,6 @@ class PigLatinizer
       else
         string + 'way'
       end
+    end
    end
 end
