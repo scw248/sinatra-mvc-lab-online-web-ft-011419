@@ -12,7 +12,7 @@ class PigLatinizer
       user_phrase.split(" ").each do |word|
         pig_phrase << translator(word)
       end
-      pig_phrase,join("")
+      pig_phrase,join(" ")
     else
       translator(user_phrase)
     end
