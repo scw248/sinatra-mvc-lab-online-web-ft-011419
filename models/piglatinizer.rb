@@ -34,11 +34,7 @@ class PigLatinizer
       word = word.split("")[1..-1].join
     end
     word + consonants + 'ay'
+    end
   end
-end
 
-
-#   def to_pig_latin(string)
-#     string.split.collect{|word| piglatinize(word)}.join(" ")
-#   end
 end
