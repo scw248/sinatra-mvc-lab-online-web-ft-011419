@@ -8,7 +8,7 @@ class PigLatinizer
    
   def piglatinize(user_phrase)
     if user_phrase.include?(" ")
-      user_phrase.each do |word|
+      user_phrase.split(" ").each do |word|
         translator(word)
       end
     else
